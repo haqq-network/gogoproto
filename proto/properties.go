@@ -640,7 +640,7 @@ func RegisterFile(filename string, fileDescriptor []byte) {
 
 	// Ensure the import path on the app file is good.
 	if err := CheckImportPath(fd.GetName(), fd.GetPackage()); err != nil {
-		fmt.Printf("WARNING: proto: %v\n", err)
+		// fmt.Printf("WARNING: proto: %v\n", err)
 	}
 
 	file, err := protodesc.FileOptions{AllowUnresolvable: true}.New(fd, gogoProtoRegistry)
